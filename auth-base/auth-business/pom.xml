@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>auth-base</artifactId>
+        <groupId>com.heycine.slash.auth</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>auth-business</artifactId>
+    <name>auth-business</name>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- domain模块 -->
+        <dependency>
+            <groupId>com.heycine.slash.auth</groupId>
+            <artifactId>auth-domain</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- mybatisplus-spring-boot-starter模块 -->
+        <dependency>
+            <groupId>com.heycine.slash.common</groupId>
+            <artifactId>mybatisplus-spring-boot-starter</artifactId>
+            <version>${heycine-common.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+    </build>
+
+</project>

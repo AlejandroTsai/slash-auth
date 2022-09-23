@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>auth-base</artifactId>
+        <groupId>com.heycine.slash.auth</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>auth-api</artifactId>
+    <name>auth-api</name>
+
+    <dependencies>
+        <!-- domain模块 -->
+        <dependency>
+            <groupId>com.heycine.slash.auth</groupId>
+            <artifactId>auth-domain</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- springCloud-openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-loadbalancer</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+    </build>
+</project>

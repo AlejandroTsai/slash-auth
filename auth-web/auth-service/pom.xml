@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>auth-web</artifactId>
+        <groupId>com.heycine.slash.auth</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>auth-service</artifactId>
+    <name>auth-service</name>
+
+    <dependencies>
+        <!-- business模块 -->
+        <dependency>
+            <groupId>com.heycine.slash.auth</groupId>
+            <artifactId>auth-business</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- redis-spring-boot-starter模块 -->
+        <dependency>
+            <groupId>com.heycine.slash.common</groupId>
+            <artifactId>redis-spring-boot-starter</artifactId>
+            <version>${heycine-common.version}</version>
+        </dependency>
+        <!-- swagger-spring-boot-starter模块 -->
+        <dependency>
+            <groupId>com.heycine.slash.common</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>${heycine-common.version}</version>
+        </dependency>
+        <!-- monitor-spring-boot-starter模块 -->
+        <dependency>
+            <groupId>com.heycine.slash.common</groupId>
+            <artifactId>monitor-spring-boot-starter</artifactId>
+            <version>${heycine-common.version}</version>
+        </dependency>
+
+        <!-- security -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-security</artifactId>
+        </dependency>
+        <!-- oauth2 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+        <!-- jwt -->
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+        </dependency>
+        <!-- encoder -->
+        <dependency>
+            <groupId>org.owasp.encoder</groupId>
+            <artifactId>encoder</artifactId>
+        </dependency>
+        <!-- captcha -->
+        <dependency>
+            <groupId>com.anji-plus</groupId>
+            <artifactId>captcha</artifactId>
+        </dependency>
+        <!-- aliyun dingtalk -->
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>dingtalk</artifactId>
+        </dependency>
+
+        <!-- springCloud-openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-loadbalancer</artifactId>
+        </dependency>
+        <!-- thymeleaf模板引擎包 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+    </build>
+</project>
